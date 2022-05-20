@@ -17,17 +17,6 @@ const useStyles = createStyles((theme) => {
     linkActiveClass: {
       borderRadius: '0.5rem',
     },
-
-    footer: {
-      borderTop: `1px solid ${
-        theme.colorScheme === 'dark'
-          ? theme.colors.dark[4]
-          : theme.colors.gray[3]
-      }`,
-      paddingTop: '0.5rem',
-      display: 'flex',
-      alignItems: 'center',
-    },
   }
 })
 

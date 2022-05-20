@@ -12,36 +12,51 @@ const useStyles = createStyles((theme) => {
     },
 
     linkClass: {
-      '&:hover': {
-        opacity: '0.9',
-      },
-      fontWeight: 500,
+      fontWeight: 400,
       color: dark ? theme.white : theme.black,
+      cursor: 'pointer',
+      fontSize: '1.05rem',
     },
 
     linkActiveClass: {
       '&, &:hover': {
-        backgroundColor: dark
-          ? theme.fn.rgba(theme.colors.orange[9], 0.25)
-          : theme.colors.orange[1],
-        color: theme.colors.orange[dark ? 3 : 7],
-        borderRadius: '7px',
+        color: theme.colors.orange[5],
       },
     },
 
-    toggleDarkMode: {},
+    linkActiveClassNavbar: {
+      backgroundColor: dark
+        ? theme.fn.rgba(theme.colors.orange[6], 0.1)
+        : theme.colors.orange[0],
+      color: theme.colors.orange[5],
+      borderRadius: '7px',
+    },
 
-    menuToggleDarkMode: {
+    toggleDarkMode: {
+      // backgroundColor: theme.colors.orange[dark ? 5 : 6],
+      // '&:hover': {
+      //   backgroundColor: theme.fn.rgba(theme.colors.orange[dark ? 5 : 6], 0.8),
+      // },
+      position: 'relative',
+      '& *': {
+        cursor: 'pointer',
+      },
+    },
+
+    icon: {
+      pointerEvents: 'none',
       position: 'absolute',
-      right: '10px',
-      top: '10px',
+      zIndex: 1,
+      top: 3,
     },
 
-    burger: {
-      [theme.fn.largerThan('xs')]: {
-        display: 'none',
-      },
-      zIndex: 999,
+    iconLight: {
+      left: 4,
+      color: theme.white,
+    },
+
+    iconDark: {
+      color: theme.colors.gray[6],
     },
 
     menuModal: {

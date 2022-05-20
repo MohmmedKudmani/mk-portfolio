@@ -4,6 +4,7 @@ import { AppShell } from '@mantine/core'
 import Navbar from './Navbar'
 import { useDisclosure } from '@mantine/hooks'
 import GlobalStyles from '../GlobalStyles'
+import Footer from './Footer'
 
 function Layout(props) {
   const { children } = props
@@ -12,16 +13,26 @@ function Layout(props) {
   return (
     <Theme>
       <AppShell
-        sx={{
+        sx={(theme) => ({
           '.mantine-AppShell-main': {
             padding: '0',
           },
-        }}
+          '.mantine-AppShell-body': {
+            paddingTop: '100px', // header height value
+            backgroundColor:
+              theme.colorScheme === 'dark'
+                ? theme.other.backgroundDark
+                : theme.other.backgroundLight,
+          },
+        })}
         header={
           <Header modelOpened={modelOpened} setModelOpened={setModelOpened} />
         }
         fixed
-        navbar={<Navbar modelOpened={modelOpened} />}
+        footer={<Footer />}
+        navbar={
+          <Navbar modelOpened={modelOpened} setModelOpened={setModelOpened} />
+        }
       >
         {children}
         <GlobalStyles modelOpened={modelOpened} />

@@ -18,29 +18,29 @@ function Theme(props) {
   const dark = colorScheme === 'dark'
 
   const primary = [
-    '#E8ECFD',
-    '#BECAF9',
-    '#94A8F4',
-    '#6B86F0',
-    '#4164EC',
-    '#1742E8',
-    '#1335B9',
-    '#0E278B',
-    '#091A5D',
-    '#050D2E',
+    '#F0F0F5',
+    '#D4D6E2',
+    '#B9BCD0',
+    '#9DA1BD',
+    '#8287AB',
+    '#676C98',
+    '#52577A',
+    '#3E415B',
+    '#292B3D',
+    '#15161E',
   ]
 
   const secondary = [
-    '#FFFAF4',
-    '#FFCD94',
-    '#FFA643',
-    '#FF8C32',
-    '#FF6600',
-    '#FF5400',
-    '#D24500',
-    '#AC3800',
-    '#8D2E00',
-    '#742600',
+    '#FFF5E6',
+    '#FEE4B8',
+    '#FED28B',
+    '#FDC15E',
+    '#FCAF31',
+    '#FC9E03',
+    '#C97E03',
+    '#975F02',
+    '#653F01',
+    '#322001',
   ]
 
   const darkColors = [
@@ -70,15 +70,27 @@ function Theme(props) {
             orange: secondary,
             dark: darkColors,
           },
+          fontFamily: 'Poppins, sans-serif',
+          headings: { fontFamily: 'Poppins, sans-serif' },
           colorScheme,
           primaryColor: 'primary',
           breakpoints: {
-            xs: 700,
+            xs: 510,
             sm: 900,
             md: 1000,
             lg: 1200,
             xl: 1400,
           },
+          other: {
+            backgroundDark: '#232534',
+            backgroundLight: '#fdfdfd ',
+            textDark: '#7E7FAF',
+            textLight: '#4E507E',
+          },
+          shadows: {
+            xl: '0px 0px 7px 4px rgba(0,0,0,0.1)',
+          },
+          primaryShade: { light: 6, dark: 6 },
         }}
       >
         <NotificationsProvider position='bottom-left'>

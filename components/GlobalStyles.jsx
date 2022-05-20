@@ -5,19 +5,18 @@ function GlobalStyles({ modelOpened }) {
     <Global
       styles={(theme) => ({
         body: {
-          paddingTop: '80px', // header height value
-          overflow: modelOpened ? 'hidden' : 'visible',
+          overflow: modelOpened ? 'hidden' : 'overlay',
         },
 
         '::-webkit-scrollbar': {
-          width: '16px',
+          width: '15px',
         },
 
         '::-webkit-scrollbar-thumb': {
           borderRadius: '8px',
           border: '4px solid transparent',
           backgroundClip: 'content-box',
-          backgroundColor: '#888',
+          backgroundColor: theme.colors.orange[5],
         },
 
         '::-webkit-scrollbar-track': {
@@ -25,7 +24,7 @@ function GlobalStyles({ modelOpened }) {
         },
 
         '::-webkit-scrollbar-thumb:hover': {
-          backgroundColor: '#555',
+          backgroundColor: theme.colors.orange[6],
         },
       })}
     />
