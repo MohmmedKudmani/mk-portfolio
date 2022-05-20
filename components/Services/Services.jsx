@@ -134,7 +134,7 @@ function Services() {
             Dark & Light Mode
           </Text>
           <Text size='sm'>
-            All my web apps will have Dark & Light Mode even if you design{' '}
+            All my web apps will have Dark & Light Mode even if your design{' '}
             {"doesn't"} have it.
           </Text>
         </Box>
@@ -175,7 +175,7 @@ function Services() {
           </Text>
           <Text size='sm'>
             I Can Help you mange your hosting from picking a Domain name to host
-            it on a Server
+            it on a Server.
           </Text>
         </Box>
         <Box>
@@ -214,7 +214,7 @@ function Services() {
           </Text>
           <Text size='sm'>
             All my web apps have good SEO included but if you need more i have a
-            good SEO plan that it might get you to google first page
+            good SEO plan that it might get you to google first page.
           </Text>
         </Box>
         <Box>

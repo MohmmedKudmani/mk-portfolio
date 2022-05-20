@@ -8,7 +8,7 @@ function Theme(props) {
 
   const [colorScheme, setColorScheme] = useLocalStorage({
     key: 'mantine-color-scheme',
-    defaultValue: 'light',
+    defaultValue: 'dark',
     getInitialValueInEffect: true,
   })
 

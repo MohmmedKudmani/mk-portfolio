@@ -10,7 +10,7 @@ import {
 import useStyle from './headerStyle'
 import { IconSun, IconMoon } from '@tabler/icons'
 import Links from './Links'
-import { useMediaQuery, useWindowScroll } from '@mantine/hooks'
+import { useWindowScroll } from '@mantine/hooks'
 import logoLight from '../../public/svg/mk-logo-light.svg'
 import logoDark from '../../public/svg/mk-logo-dark.svg'
 import Image from 'next/image'
@@ -19,7 +19,6 @@ function Header(props) {
   const { classes, cx } = useStyle()
   const { modelOpened, setModelOpened } = props
   const { colorScheme, toggleColorScheme } = useMantineColorScheme()
-  const matchXs = useMediaQuery('(min-width: 600px)')
   const dark = colorScheme === 'dark'
   const [scroll, scrollTo] = useWindowScroll()
 
@@ -36,24 +35,40 @@ function Header(props) {
         height={100}
       >
         <Container size='xl' className={classes.navbarContainer}>
-          {!matchXs && (
-            <Burger
-              opened={modelOpened}
-              onClick={() => setModelOpened.toggle()}
-            />
-          )}
+          <Burger
+            opened={modelOpened}
+            onClick={() => setModelOpened.toggle()}
+            sx={{
+              [`@media (min-width: 601px)`]: {
+                display: 'none',
+              },
+            }}
+          />
           <Group spacing='1rem'>
-            <Image
-              src={dark ? logoDark : logoLight}
-              width={60}
-              height={60}
-              alt='logo'
-              style={{
-                cursor: 'pointer',
-              }}
-              onClick={() => scrollTo({ y: 0 })}
-            />
-            {matchXs && <Links />}
+            {dark ? (
+              <Image
+                src={logoDark}
+                width={60}
+                height={60}
+                alt='logo'
+                style={{
+                  cursor: 'pointer',
+                }}
+                onClick={() => scrollTo({ y: 0 })}
+              />
+            ) : (
+              <Image
+                src={logoLight}
+                width={60}
+                height={60}
+                alt='logo'
+                style={{
+                  cursor: 'pointer',
+                }}
+                onClick={() => scrollTo({ y: 0 })}
+              />
+            )}
+            <Links />
           </Group>
           <LightDarkMode
             dark={dark}
@@ -75,7 +90,7 @@ function LightDarkMode({ classes, toggleColorScheme, dark, scroll, cx }) {
         <IconSun className={cx(classes.icon, classes.iconLight)} size={18} />
         <IconMoon
           style={{
-            right: scroll.y < 80 ? 12 : 4,
+            right: scroll.y < 400 ? 12 : 4,
           }}
           className={cx(classes.icon, classes.iconDark)}
           size={18}
@@ -88,7 +103,7 @@ function LightDarkMode({ classes, toggleColorScheme, dark, scroll, cx }) {
           })}
           checked={dark}
           color='orange'
-          mr={scroll.y < 80 && '0.5rem'}
+          mr={scroll.y < 400 && '0.5rem'}
           onChange={() => toggleColorScheme()}
           size='md'
         />

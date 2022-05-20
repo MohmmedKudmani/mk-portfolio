@@ -15,14 +15,12 @@ import {
   IconBrandGithub,
 } from '@tabler/icons'
 import useStyle from './heroStyle'
-import { useMediaQuery } from '@mantine/hooks'
 import { Link } from 'react-scroll'
 
 function Home() {
   const theme = useMantineTheme()
   const { classes } = useStyle()
   const dark = theme.colorScheme === 'dark'
-  const matchXs = useMediaQuery('(min-width: 700px)')
 
   return (
     <Container id='home' pb='4rem' px='xl' size='xl'>
@@ -85,16 +83,17 @@ function Home() {
             Contact Me
           </Button>
         </Box>
-        {matchXs && (
-          <Box
-            sx={{
-              width: '635px',
-              marginLeft: '-4rem',
-            }}
-          >
-            <BackgroundAnimation dark={dark} />
-          </Box>
-        )}
+        <Box
+          sx={{
+            width: '635px',
+            marginLeft: '-4rem',
+            [`@media (max-width: 700px)`]: {
+              display: 'none',
+            },
+          }}
+        >
+          <BackgroundAnimation dark={dark} />
+        </Box>
       </Group>
     </Container>
   )

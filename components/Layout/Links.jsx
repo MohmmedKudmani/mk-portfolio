@@ -14,7 +14,16 @@ function Links(props) {
   ]
 
   return (
-    <Group align='left' spacing='5px' direction={isNavbar ? 'column' : 'row'}>
+    <Group
+      sx={{
+        [`@media (max-width: 600px)`]: {
+          display: 'none',
+        },
+      }}
+      align='left'
+      spacing='5px'
+      direction={isNavbar ? 'column' : 'row'}
+    >
       {links.map((link) => (
         <Text
           key={link.id}

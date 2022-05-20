@@ -45,12 +45,16 @@ function Projects() {
               <ActionIcon
                 component='a'
                 className={classes.projectIcon}
+                href='https://github.com/MohmmedKudmani/mk-portfolio'
+                target='_blank'
                 variant='transparent'
               >
                 <IconBrandGithub size={30} />
               </ActionIcon>
               <ActionIcon
                 component='a'
+                href='https://mk-portfolio-alpha.vercel.app/'
+                target='_blank'
                 className={classes.projectIcon}
                 variant='transparent'
               >
@@ -148,13 +152,25 @@ function Projects() {
               <Text mb='5px' size='xs'>
                 Featured Project
               </Text>
-              <Text className={classes.title}>mk-portfolio</Text>
+              <Text className={classes.title}>crypto-7</Text>
             </Box>
             <Group direction='column' spacing='10px'>
-              <ActionIcon className={classes.projectIcon} variant='transparent'>
+              <ActionIcon
+                component='a'
+                target='_blank'
+                href='https://github.com/MohmmedKudmani/crypto-7'
+                className={classes.projectIcon}
+                variant='transparent'
+              >
                 <IconBrandGithub size={30} />
               </ActionIcon>
-              <ActionIcon className={classes.projectIcon} variant='transparent'>
+              <ActionIcon
+                component='a'
+                href='https://crypto-7.vercel.app/'
+                target='_blank'
+                className={classes.projectIcon}
+                variant='transparent'
+              >
                 <IconExternalLink size={30} />
               </ActionIcon>
             </Group>
@@ -241,13 +257,25 @@ function Projects() {
               <Text mb='5px' size='xs'>
                 Featured Project
               </Text>
-              <Text className={classes.title}>mk-portfolio</Text>
+              <Text className={classes.title}>mk-blog</Text>
             </Box>
             <Group direction='column' spacing='10px'>
-              <ActionIcon className={classes.projectIcon} variant='transparent'>
+              <ActionIcon
+                component='a'
+                target='_blank'
+                href='https://github.com/MohmmedKudmani/mk-blog'
+                className={classes.projectIcon}
+                variant='transparent'
+              >
                 <IconBrandGithub size={30} />
               </ActionIcon>
-              <ActionIcon className={classes.projectIcon} variant='transparent'>
+              <ActionIcon
+                component='a'
+                target='_blank'
+                href='https://mk-blog.vercel.app/'
+                className={classes.projectIcon}
+                variant='transparent'
+              >
                 <IconExternalLink size={30} />
               </ActionIcon>
             </Group>
