@@ -139,7 +139,7 @@ function Contact() {
                 <Text weight='300' size='sm'>
                   Working hours
                 </Text>
-                <Text>8 a.m. – 11 p.m</Text>
+                <Text>9 a.m. – 12 a.m</Text>
               </Group>
             </Group>
           </Group>

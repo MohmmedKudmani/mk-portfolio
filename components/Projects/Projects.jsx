@@ -63,9 +63,11 @@ function Projects() {
             </Group>
           </Group>
           <Text mt='xs' mb='md' className={classes.description}>
-            all data will be generated with the web App so anyone enter the web
-            app will see the pre generated data and it can be updated be restart
-            the build processes.
+            there is no data just a basic static app this package will be great
+            for{' '}
+            <Text color='orange' component='span'>
+              Portfolios & landingPages
+            </Text>
           </Text>
           <SimpleGrid spacing='lg' cols={2}>
             <Paper p='md' className={classes.features}>
@@ -79,8 +81,8 @@ function Projects() {
                 <Text>Search Engine</Text>
               </Group>
               <Group position='center'>
-                <Text>Score:</Text>
-                <Text color='green'>Very Good</Text>
+                <Text>Status:</Text>
+                <Text color='green'>Great SEO</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -94,9 +96,9 @@ function Projects() {
                 <Text>App Speed</Text>
               </Group>
               <Group position='center'>
-                <Text>Score:</Text>
+                <Text>Status:</Text>
                 {/* <Text color='yellow'>Moderate</Text> */}
-                <Text color='green'>Very Good</Text>
+                <Text color='green'>Great Speed</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -105,8 +107,8 @@ function Projects() {
                 <Text>Hosting Price</Text>
               </Group>
               <Group position='center'>
-                <Text>Score:</Text>
-                <Text color='green'>Very Good</Text>
+                <Text>Status:</Text>
+                <Text color='green'>Cheap Hosting</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -120,8 +122,8 @@ function Projects() {
                 <Text>Dynamic</Text>
               </Group>
               <Group position='center'>
-                <Text>Score:</Text>
-                <Text color='red'>Bad</Text>
+                <Text>Status:</Text>
+                <Text color='red'>No Dynamic</Text>
               </Group>
             </Paper>
           </SimpleGrid>
@@ -176,9 +178,12 @@ function Projects() {
             </Group>
           </Group>
           <Text mt='xs' mb='md' className={classes.description}>
-            all data will be generated with the web App so anyone enter the web
-            app will see the pre generated data and it can be updated be restart
-            the build processes.
+            Important data will be generated in the build process, not Important
+            data will be generated on the fly with a loading indicator this
+            package will be great for{' '}
+            <Text color='orange' component='span'>
+              apps that needs an api data
+            </Text>
           </Text>
           <SimpleGrid spacing='lg' cols={2}>
             <Paper p='md' className={classes.features}>
@@ -192,8 +197,8 @@ function Projects() {
                 <Text>Search Engine</Text>
               </Group>
               <Group position='center'>
-                <Text>Score:</Text>
-                <Text color='green'>Very Good</Text>
+                <Text>Status:</Text>
+                <Text color='orange'>Moderate SEO</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -207,9 +212,9 @@ function Projects() {
                 <Text>App Speed</Text>
               </Group>
               <Group position='center'>
-                <Text>Score:</Text>
+                <Text>Status:</Text>
                 {/* <Text color='yellow'>Moderate</Text> */}
-                <Text color='green'>Very Good</Text>
+                <Text color='orange'>Moderate Speed</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -218,8 +223,8 @@ function Projects() {
                 <Text>Hosting Price</Text>
               </Group>
               <Group position='center'>
-                <Text>Score:</Text>
-                <Text color='green'>Very Good</Text>
+                <Text>Status:</Text>
+                <Text color='green'>Cheap Hosting</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -233,8 +238,8 @@ function Projects() {
                 <Text>Dynamic</Text>
               </Group>
               <Group position='center'>
-                <Text>Score:</Text>
-                <Text color='red'>Bad</Text>
+                <Text>Status:</Text>
+                <Text color='orange'>Moderate Dynamic</Text>
               </Group>
             </Paper>
           </SimpleGrid>
@@ -281,9 +286,12 @@ function Projects() {
             </Group>
           </Group>
           <Text mt='xs' mb='md' className={classes.description}>
-            all data will be generated with the web App so anyone enter the web
-            app will see the pre generated data and it can be updated be restart
-            the build processes.
+            data will be generated in the build process, it will have a sample
+            backend code so this package will be great for{' '}
+            <Text color='orange' component='span'>
+              any app that is static but need some features like: login users,
+              comments, like button
+            </Text>
           </Text>
           <SimpleGrid spacing='lg' cols={2}>
             <Paper p='md' className={classes.features}>
@@ -297,8 +305,8 @@ function Projects() {
                 <Text>Search Engine</Text>
               </Group>
               <Group position='center'>
-                <Text>Score:</Text>
-                <Text color='green'>Very Good</Text>
+                <Text>Status:</Text>
+                <Text color='green'>Great SEO</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -312,9 +320,9 @@ function Projects() {
                 <Text>App Speed</Text>
               </Group>
               <Group position='center'>
-                <Text>Score:</Text>
+                <Text>Status:</Text>
                 {/* <Text color='yellow'>Moderate</Text> */}
-                <Text color='green'>Very Good</Text>
+                <Text color='green'>Great Speed</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -323,8 +331,8 @@ function Projects() {
                 <Text>Hosting Price</Text>
               </Group>
               <Group position='center'>
-                <Text>Score:</Text>
-                <Text color='green'>Very Good</Text>
+                <Text>Status:</Text>
+                <Text color='red'>Expensive Hosting</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -338,8 +346,8 @@ function Projects() {
                 <Text>Dynamic</Text>
               </Group>
               <Group position='center'>
-                <Text>Score:</Text>
-                <Text color='red'>Bad</Text>
+                <Text>Status:</Text>
+                <Text color='green'>Great Dynamic</Text>
               </Group>
             </Paper>
           </SimpleGrid>

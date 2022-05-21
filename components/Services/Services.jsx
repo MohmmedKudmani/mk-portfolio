@@ -55,7 +55,8 @@ function Services() {
             Modern Design
           </Text>
           <Text size='sm'>
-            I can Handle any design you want with Modern look and features,
+            I can Handle any design you want with Modern look and Responsive to
+            all devices with a lot of features.
           </Text>
         </Box>
         <Box>
