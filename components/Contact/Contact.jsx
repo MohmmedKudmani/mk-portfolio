@@ -21,7 +21,7 @@ import {
   IconX,
 } from '@tabler/icons'
 import { useClipboard } from '@mantine/hooks'
-import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser'
 import { useRef } from 'react'
 import { showNotification } from '@mantine/notifications'
 
