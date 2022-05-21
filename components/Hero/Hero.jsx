@@ -24,7 +24,15 @@ function Home() {
 
   return (
     <Container id='home' pb='4rem' px='xl' size='xl'>
-      <Group spacing='lg' position='right'>
+      <Group
+        sx={{
+          [`@media (max-width: 700px)`]: {
+            marginBottom: '2rem',
+          },
+        }}
+        spacing='lg'
+        position='right'
+      >
         <ActionIcon
           href='https://twitter.com/MohammedKudamni'
           target='_blank'

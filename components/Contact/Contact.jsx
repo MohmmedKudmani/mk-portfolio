@@ -18,8 +18,12 @@ import {
   IconMapPin,
   IconSun,
   IconCheck,
+  IconX,
 } from '@tabler/icons'
-import { useClipboard, useFocusWithin } from '@mantine/hooks'
+import { useClipboard } from '@mantine/hooks'
+import emailjs from 'emailjs-com'
+import { useRef } from 'react'
+import { showNotification } from '@mantine/notifications'
 
 function Contact() {
   const { classes } = useStyle()
@@ -28,9 +32,38 @@ function Contact() {
   const clipboardAddress = useClipboard({ timeout: 500 })
   const clipboardWorking = useClipboard({ timeout: 500 })
 
-  const { ref, focused } = useFocusWithin()
+  const form = useRef()
 
   const theme = useMantineTheme()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'service_457ejun',
+        'template_d916vvv',
+        form.current,
+        'user_uf9J6w4mKauNRphbXWblE'
+      )
+      .then(
+        (result) => {
+          showNotification({
+            message: 'Message has been sent',
+            icon: <IconCheck size={20} />,
+            color: 'green',
+          })
+        },
+        (error) => {
+          showNotification({
+            message: 'Message has not been sent',
+            icon: <IconX size={20} />,
+            color: 'red',
+          })
+        }
+      )
+    e.target.reset()
+  }
 
   return (
     <Container
@@ -144,19 +177,30 @@ function Contact() {
             </Group>
           </Group>
         </Box>
-        <Box className={classes.form}>
+        <Box
+          ref={form}
+          component='form'
+          onSubmit={sendEmail}
+          className={classes.form}
+        >
           <TextInput
             label='Email'
             placeholder='your@email.com'
             required
+            type='email'
             variant='default'
+            id='email'
+            name='email'
             classNames={{ input: classes.input, label: classes.inputLabel }}
           />
           <TextInput
             label='Name'
             placeholder='John Doe'
             variant='default'
+            name='name'
+            id='name'
             mt='md'
+            type='text'
             classNames={{ input: classes.input, label: classes.inputLabel }}
           />
           <Textarea
@@ -164,13 +208,18 @@ function Contact() {
             label='Your message'
             placeholder='I want to know about...'
             variant='default'
+            id='message'
+            name='message'
+            type='text'
             minRows={9}
             mt='md'
             classNames={{ input: classes.input, label: classes.inputLabel }}
           />
 
           <Group position='right' mt='md'>
-            <Button className={classes.control}>Send message</Button>
+            <Button type='submit' className={classes.control}>
+              Send message
+            </Button>
           </Group>
         </Box>
       </SimpleGrid>

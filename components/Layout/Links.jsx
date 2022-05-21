@@ -17,7 +17,7 @@ function Links(props) {
     <Group
       sx={{
         [`@media (max-width: 600px)`]: {
-          display: 'none',
+          display: isNavbar ? 'block' : 'none',
         },
       }}
       align='left'

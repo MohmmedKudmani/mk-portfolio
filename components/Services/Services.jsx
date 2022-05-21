@@ -11,7 +11,7 @@ import { IconBrightnessHalf } from '@tabler/icons'
 function Services() {
   const { classes } = useStyle()
   return (
-    <Container id='services' pb='10rem' px='xl' size='xl'>
+    <Container id='services' pb='7rem' px='xl' size='xl'>
       <SimpleGrid
         spacing='4rem'
         breakpoints={[
