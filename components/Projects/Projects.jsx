@@ -7,6 +7,7 @@ import {
   Paper,
   Grid,
   ActionIcon,
+  useMantineTheme,
 } from '@mantine/core'
 import Image from 'next/image'
 import crypto_7 from '../../public/images/crypto-7.png'
@@ -22,7 +23,7 @@ import mk_portfolio from '../../public/images/mk-portfolio.png'
 
 function Projects() {
   const { classes } = useStyles()
-  const matchXl = useMediaQuery('(max-width: 1100px)')
+  const theme = useMantineTheme()
 
   return (
     <Container id='projects' px='xl' size='xl'>
@@ -65,7 +66,7 @@ function Projects() {
           <Text mt='xs' mb='md' className={classes.description}>
             there is no data just a basic static app this package will be great
             for{' '}
-            <Text color='orange' component='span'>
+            <Text color={theme.colors.orange[5]} component='span'>
               Portfolios & landingPages
             </Text>
           </Text>
@@ -181,7 +182,7 @@ function Projects() {
             Important data will be generated in the build process, not Important
             data will be generated on the fly with a loading indicator this
             package will be great for{' '}
-            <Text color='orange' component='span'>
+            <Text color={theme.colors.orange[5]} component='span'>
               apps that needs an api data
             </Text>
           </Text>
@@ -198,7 +199,7 @@ function Projects() {
               </Group>
               <Group position='center'>
                 <Text>Status:</Text>
-                <Text color='orange'>Moderate SEO</Text>
+                <Text color={theme.colors.orange[5]}>Moderate SEO</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -214,7 +215,7 @@ function Projects() {
               <Group position='center'>
                 <Text>Status:</Text>
                 {/* <Text color='yellow'>Moderate</Text> */}
-                <Text color='orange'>Moderate Speed</Text>
+                <Text color={theme.colors.orange[5]}>Moderate Speed</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -239,7 +240,7 @@ function Projects() {
               </Group>
               <Group position='center'>
                 <Text>Status:</Text>
-                <Text color='orange'>Moderate Dynamic</Text>
+                <Text color={theme.colors.orange[5]}>Moderate Dynamic</Text>
               </Group>
             </Paper>
           </SimpleGrid>
@@ -288,7 +289,7 @@ function Projects() {
           <Text mt='xs' mb='md' className={classes.description}>
             data will be generated in the build process, it will have a sample
             backend code so this package will be great for{' '}
-            <Text color='orange' component='span'>
+            <Text color={theme.colors.orange[5]} component='span'>
               any app that is static but need some features like: login users,
               comments, like button
             </Text>
