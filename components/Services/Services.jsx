@@ -29,7 +29,7 @@ function Services() {
             radius='xl'
             variant='filled'
           >
-            <Image width={28} height={28} alt='ads' src={front_end} />
+            <Image priority width={28} height={28} alt='ads' src={front_end} />
           </ThemeIcon>
           <Text
             sx={(theme) => ({
@@ -69,7 +69,7 @@ function Services() {
             radius='xl'
             variant='filled'
           >
-            <Image width={30} height={30} alt='ads' src={clean_code} />
+            <Image priority width={30} height={30} alt='ads' src={clean_code} />
           </ThemeIcon>
           <Text
             sx={(theme) => ({

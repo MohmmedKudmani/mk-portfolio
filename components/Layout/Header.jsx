@@ -45,29 +45,17 @@ function Header(props) {
             }}
           />
           <Group spacing='1rem'>
-            {dark ? (
-              <Image
-                src={logoDark}
-                width={60}
-                height={60}
-                alt='logo'
-                style={{
-                  cursor: 'pointer',
-                }}
-                onClick={() => scrollTo({ y: 0 })}
-              />
-            ) : (
-              <Image
-                src={logoLight}
-                width={60}
-                height={60}
-                alt='logo'
-                style={{
-                  cursor: 'pointer',
-                }}
-                onClick={() => scrollTo({ y: 0 })}
-              />
-            )}
+            <Image
+              src={dark ? logoDark : logoLight}
+              width={60}
+              height={60}
+              alt='logo'
+              priority
+              style={{
+                cursor: 'pointer',
+              }}
+              onClick={() => scrollTo({ y: 0 })}
+            />
             <Links />
           </Group>
           <LightDarkMode
