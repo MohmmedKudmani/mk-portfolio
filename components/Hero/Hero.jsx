@@ -16,17 +16,21 @@ import {
 } from '@tabler/icons'
 import useStyle from './heroStyle'
 import { Link } from 'react-scroll'
+import { state } from '../../lib/state'
+import { useSnapshot } from 'valtio'
 
-function Home() {
+function Home(props) {
+  const { isFreelance, setFreelance } = props
   const theme = useMantineTheme()
   const { classes } = useStyle()
   const dark = theme.colorScheme === 'dark'
+  const snap = useSnapshot(state)
 
   return (
     <Container id='home' pb='4rem' px='xl' size='xl'>
       <Group
         sx={{
-          [`@media (max-width: 700px)`]: {
+          [`@media (max-width: 720px)`]: {
             marginBottom: '2rem',
           },
         }}
@@ -63,6 +67,30 @@ function Home() {
         >
           <IconBrandLinkedin className={classes.icons} size='28px' />
         </ActionIcon>
+        <Button
+          onClick={() =>
+            setFreelance((current) => (current === 'true' ? 'false' : 'true'))
+          }
+          variant='subtle'
+          sx={{
+            position: 'fixed',
+            top: '2rem',
+            zIndex: 999,
+            marginRight: '3rem',
+            '&:hover': {
+              backgroundColor: 'transparent',
+            },
+            [`@media (max-width: 720px)`]: {
+              display: snap.modelOpened ? 'block' : 'none',
+              top: 'auto',
+              bottom: '1rem',
+              left: '0.7rem',
+            },
+          }}
+          color='gray'
+        >
+          {isFreelance === 'true' ? 'Switch to Work' : 'Switch to Freelance'}
+        </Button>
       </Group>
       <Group spacing='0' position='apart' noWrap direction='row'>
         <Box>
@@ -70,11 +98,19 @@ function Home() {
           <Title className={classes.title} my='sm'>
             Mohammed <br /> Kudmani
           </Title>
-          <Text className={classes.aboutMe}>
-            A freelance that specialized in static web app with a lot of
-            features and services <br /> Dont be afraid to contact me if you
-            have any questions.
-          </Text>
+          {isFreelance === 'true' ? (
+            <Text className={classes.aboutMe}>
+              A freelance that specialized in static web app with a lot of
+              features and services <br /> Dont be afraid to contact me if you
+              have any questions.
+            </Text>
+          ) : (
+            <Text className={classes.aboutMe}>
+              An 18 years old from Jordan specialized in Frontend Web
+              Development <br />
+              with some backend Knowledge
+            </Text>
+          )}
           <Button
             className={classes.heroButton}
             mt='lg'
@@ -86,16 +122,16 @@ function Home() {
             offset={-101}
             spy={true}
             smooth={true}
-            to='contact'
+            to={isFreelance === 'true' ? 'contact' : 'My Projects'}
           >
-            Contact Me
+            {isFreelance === 'true' ? 'Contact Me' : 'My Projects'}
           </Button>
         </Box>
         <Box
           sx={{
             width: '635px',
             marginLeft: '-4rem',
-            [`@media (max-width: 700px)`]: {
+            [`@media (max-width: 720px)`]: {
               display: 'none',
             },
           }}

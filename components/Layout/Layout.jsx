@@ -5,10 +5,12 @@ import Navbar from './Navbar'
 import { useDisclosure } from '@mantine/hooks'
 import GlobalStyles from '../GlobalStyles'
 import Footer from './Footer'
+import { state } from '../../lib/state'
+import { useSnapshot } from 'valtio'
 
 function Layout(props) {
   const { children } = props
-  const [modelOpened, setModelOpened] = useDisclosure(false)
+  const { modelOpened } = useSnapshot(state)
 
   return (
     <Theme>
@@ -25,14 +27,10 @@ function Layout(props) {
                 : theme.other.backgroundLight,
           },
         })}
-        header={
-          <Header modelOpened={modelOpened} setModelOpened={setModelOpened} />
-        }
+        header={<Header modelOpened={modelOpened} state={state} />}
         fixed
         footer={<Footer />}
-        navbar={
-          <Navbar modelOpened={modelOpened} setModelOpened={setModelOpened} />
-        }
+        navbar={<Navbar modelOpened={modelOpened} state={state} />}
       >
         {children}
         <GlobalStyles modelOpened={modelOpened} />

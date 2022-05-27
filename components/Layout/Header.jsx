@@ -17,7 +17,7 @@ import Image from 'next/image'
 
 function Header(props) {
   const { classes, cx } = useStyle()
-  const { modelOpened, setModelOpened } = props
+  const { modelOpened, state } = props
   const { colorScheme, toggleColorScheme } = useMantineColorScheme()
   const dark = colorScheme === 'dark'
   const [scroll, scrollTo] = useWindowScroll()
@@ -37,9 +37,13 @@ function Header(props) {
         <Container size='xl' className={classes.navbarContainer}>
           <Burger
             opened={modelOpened}
-            onClick={() => setModelOpened.toggle()}
+            onClick={() =>
+              state.modelOpened === true
+                ? (state.modelOpened = false)
+                : (state.modelOpened = true)
+            }
             sx={{
-              [`@media (min-width: 601px)`]: {
+              [`@media (min-width: 721px)`]: {
                 display: 'none',
               },
             }}

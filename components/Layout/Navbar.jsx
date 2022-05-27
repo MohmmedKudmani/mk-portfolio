@@ -1,12 +1,10 @@
-import { Navbar as MantineNavbar, Text } from '@mantine/core'
-import useStyle from './navbarStyle'
+import { Navbar as MantineNavbar } from '@mantine/core'
 import Links from './Links'
 import { useMediaQuery } from '@mantine/hooks'
 
 function Navbar(props) {
-  const { modelOpened, setModelOpened } = props
-  const { classes, cx } = useStyle()
-  const matchXs = useMediaQuery('(max-width: 601px)')
+  const { modelOpened, state } = props
+  const matchXs = useMediaQuery('(max-width: 720px)')
 
   return (
     <MantineNavbar
@@ -21,7 +19,7 @@ function Navbar(props) {
       hidden={!modelOpened}
     >
       <MantineNavbar.Section grow>
-        <Links isNavbar setModelOpened={setModelOpened} />
+        <Links isNavbar state={state} />
       </MantineNavbar.Section>
     </MantineNavbar>
   )

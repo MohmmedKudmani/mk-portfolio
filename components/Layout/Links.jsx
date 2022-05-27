@@ -3,7 +3,7 @@ import useStyle from './headerStyle'
 import { Link } from 'react-scroll'
 
 function Links(props) {
-  const { isNavbar, setModelOpened } = props
+  const { isNavbar, state } = props
   const { classes } = useStyle()
 
   const links = [
@@ -16,12 +16,12 @@ function Links(props) {
   return (
     <Group
       sx={{
-        [`@media (max-width: 600px)`]: {
+        [`@media (max-width: 720px)`]: {
           display: isNavbar ? 'block' : 'none',
         },
       }}
       align='left'
-      spacing='5px'
+      spacing='0'
       direction={isNavbar ? 'column' : 'row'}
     >
       {links.map((link) => (
@@ -49,7 +49,9 @@ function Links(props) {
             smooth={true}
             to={link.route}
             onClick={() => {
-              isNavbar && setModelOpened.close()
+              if (isNavbar) {
+                state.modelOpened = false
+              }
             }}
           >
             {link.label}

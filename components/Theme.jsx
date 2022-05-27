@@ -93,7 +93,7 @@ function Theme(props) {
           primaryShade: { light: 6, dark: 6 },
         }}
       >
-        <NotificationsProvider position='bottom-left'>
+        <NotificationsProvider autoClose={2000} position='bottom-left'>
           {children}
           <NextNProgress
             color={primary[6]}

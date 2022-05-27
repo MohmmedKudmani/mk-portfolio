@@ -8,22 +8,30 @@ import {
   Grid,
   ActionIcon,
   useMantineTheme,
+  Highlight,
 } from '@mantine/core'
 import Image from 'next/image'
 import crypto_7 from '../../public/images/crypto-7.png'
 import useStyles from './projectsStyle'
-import { IconBrandGithub, IconExternalLink } from '@tabler/icons'
+import { IconBrandGithub, IconExternalLink, IconX } from '@tabler/icons'
 import full_stack from '../../public/svg/full_stack.svg'
 import hosting from '../../public/svg/hosting.svg'
 import search_engine from '../../public/svg/search_engine.svg'
 import speed_meter from '../../public/svg/speedometer-svgrepo-com.svg'
-import { useMediaQuery } from '@mantine/hooks'
 import mk_blog from '../../public/images/mk-blog.png'
 import mk_portfolio from '../../public/images/mk-portfolio.png'
+import { showNotification } from '@mantine/notifications'
 
-function Projects() {
+function Projects(props) {
   const { classes } = useStyles()
   const theme = useMantineTheme()
+  const { isFreelance } = props
+
+  const highlightStyle = (theme) => ({
+    backgroundColor: 'transparent',
+    color: theme.colors.orange[5],
+    fontWeight: 400,
+  })
 
   return (
     <Container id='projects' px='xl' size='xl'>
@@ -53,9 +61,13 @@ function Projects() {
                 <IconBrandGithub size={30} />
               </ActionIcon>
               <ActionIcon
-                component='a'
-                href='https://mk-portfolio-alpha.vercel.app/'
-                target='_blank'
+                onClick={() =>
+                  showNotification({
+                    title: 'You are Already In the Project :)',
+                    icon: <IconX />,
+                    color: 'red',
+                  })
+                }
                 className={classes.projectIcon}
                 variant='transparent'
               >
@@ -64,11 +76,25 @@ function Projects() {
             </Group>
           </Group>
           <Text mt='xs' mb='md' className={classes.description}>
-            there is no data just a basic static app this package will be great
-            for{' '}
-            <Text color={theme.colors.orange[5]} component='span'>
-              Portfolios & landingPages
-            </Text>
+            {isFreelance === 'true' ? (
+              <Highlight
+                size='md'
+                highlight='Portfolios & landingPages.'
+                highlightStyles={highlightStyle}
+              >
+                There is no data just a basic static app this package will be
+                great for Portfolios & landingPages.
+              </Highlight>
+            ) : (
+              <Highlight
+                size='md'
+                highlight='Next.js as framework, Mantine as UI.'
+                highlightStyles={highlightStyle}
+              >
+                Simple static web app, have a Modern and Responsive design, it
+                uses Next.js as framework, Mantine as UI.
+              </Highlight>
+            )}
           </Text>
           <SimpleGrid spacing='lg' cols={2}>
             <Paper p='md' className={classes.features}>
@@ -178,14 +204,34 @@ function Projects() {
               </ActionIcon>
             </Group>
           </Group>
-          <Text mt='xs' mb='md' className={classes.description}>
-            Important data will be generated in the build process, not Important
-            data will be generated on the fly with a loading indicator this
-            package will be great for{' '}
-            <Text color={theme.colors.orange[5]} component='span'>
-              apps that needs an api data
-            </Text>
-          </Text>
+          {isFreelance === 'true' ? (
+            <Highlight
+              mt='xs'
+              mb='md'
+              size='md'
+              className={classes.description}
+              highlight='apps that needs an api data.'
+              highlightStyles={highlightStyle}
+            >
+              Important data will be generated in the build process, not
+              Important data will be generated on the fly with a loading
+              indicator this package will be great for apps that needs an api
+              data.
+            </Highlight>
+          ) : (
+            <Highlight
+              mt='xs'
+              mb='md'
+              size='md'
+              className={classes.description}
+              highlight='Next.js, SSG,
+              CSR, ReactQuery, Valtio, Mantine.'
+              highlightStyles={highlightStyle}
+            >
+              Static Web App with api.coingecko.com Data, it uses Next.js, SSG,
+              CSR, ReactQuery, Valtio, Mantine.
+            </Highlight>
+          )}
           <SimpleGrid spacing='lg' cols={2}>
             <Paper p='md' className={classes.features}>
               <Group mb='sm' position='center' align='center'>
@@ -286,14 +332,37 @@ function Projects() {
               </ActionIcon>
             </Group>
           </Group>
-          <Text mt='xs' mb='md' className={classes.description}>
-            data will be generated in the build process, it will have a sample
-            backend code so this package will be great for{' '}
-            <Text color={theme.colors.orange[5]} component='span'>
-              any app that is static but need some features like: login users,
-              comments, like button
-            </Text>
-          </Text>
+          {isFreelance === 'true' ? (
+            <Highlight
+              mt='xs'
+              mb='md'
+              size='md'
+              className={classes.description}
+              highlight='any app
+              that needs static Data with some features like login users,
+              comments.'
+              highlightStyles={highlightStyle}
+            >
+              Data will be generated in the build process, the App will have a
+              simple backend code, so this package will be great for any app
+              that needs static Data with some features like login users,
+              comments.
+            </Highlight>
+          ) : (
+            <Highlight
+              mt='xs'
+              mb='md'
+              size='md'
+              className={classes.description}
+              highlight='Next.js, SSG, CSR, ReactQuery,
+              Valtio, Mantine, NextAuth, Mongodb.'
+              highlightStyles={highlightStyle}
+            >
+              Static Blog with simple backend API for futures like
+              Authentication and Comments, it uses Next.js, SSG, CSR,
+              ReactQuery, Valtio, Mantine, NextAuth, Mongodb.
+            </Highlight>
+          )}
           <SimpleGrid spacing='lg' cols={2}>
             <Paper p='md' className={classes.features}>
               <Group mb='sm' position='center' align='center'>

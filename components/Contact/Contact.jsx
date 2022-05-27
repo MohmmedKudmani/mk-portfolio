@@ -93,7 +93,7 @@ function Contact() {
               ) : (
                 <ActionIcon
                   onClick={(e) => {
-                    clipboardEmail.copy('m7mdsy976@gmail.com')
+                    clipboardEmail.copy('mohammedkudmani@gmail.com')
                   }}
                   size={35}
                   className={classes.social}
@@ -106,7 +106,7 @@ function Contact() {
                 <Text weight='300' size='sm'>
                   Email
                 </Text>
-                <Text>m7mdsy976@gmail.com</Text>
+                <Text>mohammedkudmani@gmail.com</Text>
               </Group>
             </Group>
             <Group spacing='sm' align='flex-start'>
