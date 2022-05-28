@@ -27,7 +27,7 @@ function Home(props) {
   const snap = useSnapshot(state)
 
   return (
-    <Container id='home' pb='4rem' px='xl' size='xl'>
+    <Container id='home' pb='4rem' px='md' size='xl'>
       <Group
         sx={{
           [`@media (max-width: 720px)`]: {

@@ -21,11 +21,13 @@ import speed_meter from '../../public/svg/speedometer-svgrepo-com.svg'
 import mk_blog from '../../public/images/mk-blog.png'
 import mk_portfolio from '../../public/images/mk-portfolio.png'
 import { showNotification } from '@mantine/notifications'
+import { useMediaQuery } from '@mantine/hooks'
 
 function Projects(props) {
   const { classes } = useStyles()
   const theme = useMantineTheme()
   const { isFreelance } = props
+  const matchXs = useMediaQuery('(max-width: 550px)')
 
   const highlightStyle = (theme) => ({
     backgroundColor: 'transparent',
@@ -98,7 +100,7 @@ function Projects(props) {
           </Text>
           <SimpleGrid spacing='lg' cols={2}>
             <Paper p='md' className={classes.features}>
-              <Group mb='md' noWrap position='center'>
+              <Group mb='md' position='center'>
                 <Image
                   src={search_engine}
                   width={35}
@@ -108,7 +110,7 @@ function Projects(props) {
                 <Text>Search Engine</Text>
               </Group>
               <Group position='center'>
-                <Text>Status:</Text>
+                {!matchXs && <Text>Status:</Text>}
                 <Text color='green'>Great SEO</Text>
               </Group>
             </Paper>
@@ -123,7 +125,7 @@ function Projects(props) {
                 <Text>App Speed</Text>
               </Group>
               <Group position='center'>
-                <Text>Status:</Text>
+                {!matchXs && <Text>Status:</Text>}
                 {/* <Text color='yellow'>Moderate</Text> */}
                 <Text color='green'>Great Speed</Text>
               </Group>
@@ -134,8 +136,8 @@ function Projects(props) {
                 <Text>Hosting Price</Text>
               </Group>
               <Group position='center'>
-                <Text>Status:</Text>
-                <Text color='green'>Cheap Hosting</Text>
+                {!matchXs && <Text>Status:</Text>}
+                <Text color='green'>Cheap Host</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -146,10 +148,10 @@ function Projects(props) {
                   height={35}
                   alt='full_stack'
                 />
-                <Text>Dynamic</Text>
+                <Text>Dynamic App</Text>
               </Group>
               <Group position='center'>
-                <Text>Status:</Text>
+                {!matchXs && <Text>Status:</Text>}
                 <Text color='red'>No Dynamic</Text>
               </Group>
             </Paper>
@@ -244,12 +246,12 @@ function Projects(props) {
                 <Text>Search Engine</Text>
               </Group>
               <Group position='center'>
-                <Text>Status:</Text>
+                {!matchXs && <Text>Status:</Text>}
                 <Text color={theme.colors.orange[5]}>Moderate SEO</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
-              <Group mb='sm' position='center'>
+              <Group mb='sm' position='center' align='center'>
                 <Image
                   src={speed_meter}
                   width={40}
@@ -259,19 +261,19 @@ function Projects(props) {
                 <Text>App Speed</Text>
               </Group>
               <Group position='center'>
-                <Text>Status:</Text>
+                {!matchXs && <Text>Status:</Text>}
                 {/* <Text color='yellow'>Moderate</Text> */}
-                <Text color={theme.colors.orange[5]}>Moderate Speed</Text>
+                <Text color={theme.colors.orange[5]}>Moderate</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
-              <Group mb='sm' position='center'>
+              <Group mb='sm' position='center' align='center'>
                 <Image src={hosting} width={35} height={35} alt='hosting' />
                 <Text>Hosting Price</Text>
               </Group>
-              <Group position='center'>
-                <Text>Status:</Text>
-                <Text color='green'>Cheap Hosting</Text>
+              <Group position='center' align='center'>
+                {!matchXs && <Text>Status:</Text>}
+                <Text color='green'>Cheap Host</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -282,11 +284,11 @@ function Projects(props) {
                   height={35}
                   alt='full_stack'
                 />
-                <Text>Dynamic</Text>
+                <Text>Dynamic App</Text>
               </Group>
               <Group position='center'>
-                <Text>Status:</Text>
-                <Text color={theme.colors.orange[5]}>Moderate Dynamic</Text>
+                {!matchXs && <Text>Status:</Text>}
+                <Text color={theme.colors.orange[5]}>Moderate</Text>
               </Group>
             </Paper>
           </SimpleGrid>
@@ -375,7 +377,7 @@ function Projects(props) {
                 <Text>Search Engine</Text>
               </Group>
               <Group position='center'>
-                <Text>Status:</Text>
+                {!matchXs && <Text>Status:</Text>}
                 <Text color='green'>Great SEO</Text>
               </Group>
             </Paper>
@@ -390,7 +392,7 @@ function Projects(props) {
                 <Text>App Speed</Text>
               </Group>
               <Group position='center'>
-                <Text>Status:</Text>
+                {!matchXs && <Text>Status:</Text>}
                 {/* <Text color='yellow'>Moderate</Text> */}
                 <Text color='green'>Great Speed</Text>
               </Group>
@@ -401,8 +403,8 @@ function Projects(props) {
                 <Text>Hosting Price</Text>
               </Group>
               <Group position='center'>
-                <Text>Status:</Text>
-                <Text color='red'>Expensive Hosting</Text>
+                {!matchXs && <Text>Status:</Text>}
+                <Text color='red'>Expensive Host</Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -413,10 +415,10 @@ function Projects(props) {
                   height={35}
                   alt='full_stack'
                 />
-                <Text>Dynamic</Text>
+                <Text>Dynamic App</Text>
               </Group>
               <Group position='center'>
-                <Text>Status:</Text>
+                {!matchXs && <Text>Status:</Text>}
                 <Text color='green'>Great Dynamic</Text>
               </Group>
             </Paper>

@@ -20,7 +20,7 @@ import {
   IconCheck,
   IconX,
 } from '@tabler/icons'
-import { useClipboard } from '@mantine/hooks'
+import { useClipboard, useMediaQuery } from '@mantine/hooks'
 import emailjs from '@emailjs/browser'
 import { useRef } from 'react'
 import { showNotification } from '@mantine/notifications'
@@ -31,10 +31,11 @@ function Contact() {
   const clipboardPhone = useClipboard({ timeout: 500 })
   const clipboardAddress = useClipboard({ timeout: 500 })
   const clipboardWorking = useClipboard({ timeout: 500 })
+  const matchXs = useMediaQuery('(max-width: 550px)')
 
   const form = useRef()
 
-  const theme = useMantineTheme()
+  const theme = useMantineTheme('')
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -69,7 +70,7 @@ function Contact() {
     <Container
       id='contact'
       py='7rem'
-      px='xl'
+      px='md'
       size='xl'
       className={classes.wrapper}
     >
@@ -103,10 +104,12 @@ function Contact() {
                 </ActionIcon>
               )}
               <Group spacing='0' direction='column'>
-                <Text weight='300' size='sm'>
+                <Text weight='300' size='md'>
                   Email
                 </Text>
-                <Text>mohammedkudmani@gmail.com</Text>
+                <Text size={matchXs ? 'sm' : 'md'}>
+                  mohammedkudmani@gmail.com
+                </Text>
               </Group>
             </Group>
             <Group spacing='sm' align='flex-start'>
@@ -128,7 +131,7 @@ function Contact() {
                 <Text weight='300' size='sm'>
                   Phone
                 </Text>
-                <Text>0789903356</Text>
+                <Text size={matchXs ? 'sm' : 'md'}>0789903356</Text>
               </Group>
             </Group>
             <Group spacing='sm' align='flex-start'>
@@ -150,7 +153,7 @@ function Contact() {
                 <Text weight='300' size='sm'>
                   Address
                 </Text>
-                <Text>Jordan, Amman</Text>
+                <Text size={matchXs ? 'sm' : 'md'}>Jordan, Amman</Text>
               </Group>
             </Group>
             <Group spacing='sm' align='flex-start'>
@@ -172,7 +175,7 @@ function Contact() {
                 <Text weight='300' size='sm'>
                   Working hours
                 </Text>
-                <Text>9 a.m. – 12 a.m</Text>
+                <Text size={matchXs ? 'sm' : 'md'}>9 a.m. – 12 a.m</Text>
               </Group>
             </Group>
           </Group>

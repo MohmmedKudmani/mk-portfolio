@@ -13,7 +13,7 @@ import front_end from '../../public/svg/front-end.svg'
 import hosting from '../../public/svg/hosting.svg'
 import search_engine from '../../public/svg/search_engine.svg'
 import clean_code from '../../public/svg/clean_code.svg'
-import nodejs from '../../public/svg/nodejs-svgrepo-com (2).svg'
+import nodejs from '../../public/svg/nodejs-svgrepo-com(2).svg'
 import redux from '../../public/svg/redux-svgrepo-com.svg'
 import {
   IconBrightnessHalf,
@@ -34,7 +34,7 @@ function Services(props) {
     fontSize: '15px',
   })
   return (
-    <Container id='services' pb='7rem' px='xl' size='xl'>
+    <Container id='services' pb='7rem' px='md' size='xl'>
       <SimpleGrid
         spacing='4rem'
         breakpoints={[
