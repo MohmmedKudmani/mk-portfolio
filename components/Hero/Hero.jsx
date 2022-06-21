@@ -122,7 +122,7 @@ function Home(props) {
             offset={-101}
             spy={true}
             smooth={true}
-            to={isFreelance === 'true' ? 'contact' : 'My Projects'}
+            to={isFreelance === 'true' ? 'contact' : 'projects'}
           >
             {isFreelance === 'true' ? 'Contact Me' : 'My Projects'}
           </Button>
