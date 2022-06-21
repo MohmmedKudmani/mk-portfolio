@@ -67,7 +67,13 @@ function Contact() {
   }
 
   return (
-    <Container py='7rem' px='md' size='xl' className={classes.wrapper}>
+    <Container
+      id='contact'
+      py='7rem'
+      px='md'
+      size='xl'
+      className={classes.wrapper}
+    >
       <SimpleGrid
         cols={2}
         spacing={50}
@@ -75,7 +81,6 @@ function Contact() {
         sx={{
           alignItems: 'center',
         }}
-        id='contact'
       >
         <Box>
           <Title className={classes.title}>Contact Me</Title>
