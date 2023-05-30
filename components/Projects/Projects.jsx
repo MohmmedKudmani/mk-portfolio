@@ -19,8 +19,7 @@ import hosting from '../../public/svg/hosting.svg'
 import search_engine from '../../public/svg/search_engine.svg'
 import speed_meter from '../../public/svg/speedometer-svgrepo-com.svg'
 import mk_blog from '../../public/images/mk-blog.png'
-import mk_portfolio from '../../public/images/mk-portfolio.png'
-import { showNotification } from '@mantine/notifications'
+import dropflow from '../../public/images/dropflow.png'
 import { useMediaQuery } from '@mantine/hooks'
 
 function Projects(props) {
@@ -50,27 +49,24 @@ function Projects(props) {
               <Text mb='5px' size='xs'>
                 Featured Project
               </Text>
-              <Text className={classes.title}>mk-portfolio</Text>
+              <Text className={classes.title}>Dropflow</Text>
             </Box>
             <Group direction='column' spacing='10px'>
               <ActionIcon
-                component='a'
-                className={classes.projectIcon}
-                href='https://github.com/MohmmedKudmani/mk-portfolio'
-                target='_blank'
+                sx={{
+                  backgroundColor: 'transparent !important',
+                  border: 'none !important',
+                }}
                 variant='transparent'
+                disabled
               >
                 <IconBrandGithub size={30} />
               </ActionIcon>
               <ActionIcon
-                onClick={() =>
-                  showNotification({
-                    title: 'You are Already In the Project :)',
-                    icon: <IconX />,
-                    color: 'red',
-                  })
-                }
+                component='a'
+                href='https://www.dropflow.app'
                 className={classes.projectIcon}
+                target='_blank'
                 variant='transparent'
               >
                 <IconExternalLink size={30} />
@@ -78,25 +74,23 @@ function Projects(props) {
             </Group>
           </Group>
           <Text mt='xs' mb='md' className={classes.description}>
-            {isFreelance === 'true' ? (
-              <Highlight
-                size='md'
-                highlight='Portfolios & landingPages.'
-                highlightStyles={highlightStyle}
-              >
-                There is no data just a basic static app this package will be
-                great for Portfolios & landingPages.
-              </Highlight>
-            ) : (
-              <Highlight
-                size='md'
-                highlight='Next.js as framework, Mantine as UI.'
-                highlightStyles={highlightStyle}
-              >
-                Simple static web app, have a Modern and Responsive design, it
-                uses Next.js as framework, Mantine as UI.
-              </Highlight>
-            )}
+            Dropflow is a service for dropshipping business owners to automate
+            dropshipping to facebook marketplace.
+            <Highlight
+              mt='md'
+              size='md'
+              highlight='Astro, Tailwind CSS'
+              highlightStyles={highlightStyle}
+            >
+              The Landing page is built with Astro, Tailwind CSS.
+            </Highlight>
+            <Highlight
+              size='md'
+              highlight='Nextjs, Mantine'
+              highlightStyles={highlightStyle}
+            >
+              The Dashboard is built with Nextjs, Mantine.
+            </Highlight>
           </Text>
           <SimpleGrid spacing='lg' cols={2}>
             <Paper p='md' className={classes.features}>
@@ -162,8 +156,8 @@ function Projects(props) {
             layout='responsive'
             width={650}
             height={400}
-            src={mk_portfolio}
-            alt='mk_portfolio'
+            src={dropflow}
+            alt='dropflow'
             className={classes.image}
           />
         </Grid.Col>

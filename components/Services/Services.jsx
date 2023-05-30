@@ -17,12 +17,11 @@ import nodejs from '../../public/svg/nodejs-svgrepo-com(2).svg'
 import redux from '../../public/svg/redux-svgrepo-com.svg'
 import {
   IconBrightnessHalf,
-  IconBrandHtml5,
-  IconBrandJavascript,
   IconBrandNextjs,
   IconBrandGit,
-  IconBrandGithub,
+  IconBrandTypescript,
 } from '@tabler/icons'
+import mantine from '../../public/svg/mantine.svg'
 
 function Services(props) {
   const { isFreelance } = props
@@ -99,11 +98,7 @@ function Services(props) {
               radius='xl'
               variant='filled'
             >
-              <IconBrandHtml5
-                stroke={1.5}
-                color={theme.colors.orange[5]}
-                size={34}
-              />
+              <Image src={mantine} width={45} height={45} alt='mantine' />
             </ThemeIcon>
             <Text
               sx={{
@@ -113,15 +108,15 @@ function Services(props) {
               size='lg'
               my='sm'
             >
-              HTML & CSS
+              Mantine UI & Tailwind CSS
             </Text>
             <Highlight
               size='sm'
               highlightStyles={highlightStyle}
-              highlight='JSX styles, SCSS, Flex, Grid, Responsive, Animation.'
+              highlight='JSX styles, Flex, Grid, Responsive, Animation.'
             >
-              I know everything about HTML & CSS from Basics to Advanced,
-              Specially JSX styles, SCSS, Flex, Grid, Responsive, Animation.
+              I know everything about Mantine UI & Tailwind CSS from Basics to
+              Advanced, Specially JSX styles, Flex, Grid, Responsive, Animation.
             </Highlight>
           </Box>
         )}
@@ -182,7 +177,7 @@ function Services(props) {
               radius='xl'
               variant='filled'
             >
-              <IconBrandJavascript
+              <IconBrandTypescript
                 color={theme.colors.orange[5]}
                 stroke={1.5}
                 size={35}
@@ -196,17 +191,18 @@ function Services(props) {
               weight='bold'
               size='lg'
             >
-              JavaScript
+              TypeScript
             </Text>
             <Highlight
               size='sm'
               highlightStyles={highlightStyle}
               highlight={
-                'Dom Manipulation, Async await, Functional Programming, ES6.'
+                'Async Await, Functional Programming, Types, Decorators, Generics, Interfaces.'
               }
             >
-              I know a lot about JavaScript from Basics to Advanced, Specially
-              Dom Manipulation, Async Await, Functional Programming, ES6.
+              I know a lot about TypeScript from Basics to Advanced, Specially
+              Async Await, Functional Programming, Types, Decorators, Generics,
+              Interfaces.
             </Highlight>
           </Box>
         )}

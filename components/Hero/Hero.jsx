@@ -67,7 +67,7 @@ function Home(props) {
         >
           <IconBrandLinkedin className={classes.icons} size='28px' />
         </ActionIcon>
-        <Button
+        {/* <Button
           onClick={() =>
             setFreelance((current) => (current === 'true' ? 'false' : 'true'))
           }
@@ -90,7 +90,7 @@ function Home(props) {
           color='gray'
         >
           {isFreelance === 'true' ? 'Switch to Work' : 'Switch to Freelance'}
-        </Button>
+        </Button> */}
       </Group>
       <Group spacing='0' position='apart' noWrap direction='row'>
         <Box>
@@ -106,9 +106,9 @@ function Home(props) {
             </Text>
           ) : (
             <Text className={classes.aboutMe}>
-              An 18 years old from Jordan specialized in Frontend Web
-              Development <br />
-              with some backend Knowledge
+              A 20 years old from Jordan specialized in Frontend Web Development{' '}
+              <br />
+              with good backend Knowledge
             </Text>
           )}
           <Button

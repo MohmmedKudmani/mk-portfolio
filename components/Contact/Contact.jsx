@@ -118,7 +118,7 @@ function Contact() {
               ) : (
                 <ActionIcon
                   onClick={(e) => {
-                    clipboardPhone.copy('0789903356')
+                    clipboardPhone.copy('0796432562')
                   }}
                   size={35}
                   className={classes.social}
@@ -131,7 +131,7 @@ function Contact() {
                 <Text weight='300' size='sm'>
                   Phone
                 </Text>
-                <Text size={matchXs ? 'sm' : 'md'}>0789903356</Text>
+                <Text size={matchXs ? 'sm' : 'md'}>0796432562</Text>
               </Group>
             </Group>
             <Group spacing='sm' align='flex-start'>
