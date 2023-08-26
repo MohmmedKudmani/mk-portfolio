@@ -58,7 +58,7 @@ function Home(props) {
           <IconBrandGithub className={classes.icons} size='28px' />
         </ActionIcon>
         <ActionIcon
-          href='https://www.linkedin.com/in/mohmmed-kudmani-b64889212/'
+          href='https://www.linkedin.com/in/mohammed-kudmani-b64889212/'
           target='_blank'
           component='a'
           radius='xl'
@@ -67,30 +67,6 @@ function Home(props) {
         >
           <IconBrandLinkedin className={classes.icons} size='28px' />
         </ActionIcon>
-        {/* <Button
-          onClick={() =>
-            setFreelance((current) => (current === 'true' ? 'false' : 'true'))
-          }
-          variant='subtle'
-          sx={{
-            position: 'fixed',
-            top: '2rem',
-            zIndex: 999,
-            marginRight: '3rem',
-            '&:hover': {
-              backgroundColor: 'transparent',
-            },
-            [`@media (max-width: 720px)`]: {
-              display: snap.modelOpened ? 'block' : 'none',
-              top: 'auto',
-              bottom: '1rem',
-              left: '0.7rem',
-            },
-          }}
-          color='gray'
-        >
-          {isFreelance === 'true' ? 'Switch to Work' : 'Switch to Freelance'}
-        </Button> */}
       </Group>
       <Group spacing='0' position='apart' noWrap direction='row'>
         <Box>

@@ -8,7 +8,7 @@ function Links(props) {
 
   const links = [
     { id: 0, label: 'Home', route: 'home' },
-    { id: 1, label: 'Services', route: 'services' },
+    { id: 1, label: 'Skills', route: 'skills' },
     { id: 2, label: 'Projects', route: 'projects' },
     { id: 3, label: 'Contact', route: 'contact' },
   ]

@@ -23,7 +23,7 @@ import {
 } from '@tabler/icons'
 import mantine from '../../public/svg/mantine.svg'
 
-function Services(props) {
+function Skills(props) {
   const { isFreelance } = props
   const theme = useMantineTheme()
   const highlightStyle = (theme) => ({
@@ -32,8 +32,9 @@ function Services(props) {
     fontWeight: 500,
     fontSize: '15px',
   })
+
   return (
-    <Container id='services' pb='7rem' px='md' size='xl'>
+    <Container id='skills' pb='7rem' px='md' size='xl'>
       <SimpleGrid
         spacing='4rem'
         breakpoints={[
@@ -513,4 +514,4 @@ function Services(props) {
   )
 }
 
-export default Services
+export default Skills
