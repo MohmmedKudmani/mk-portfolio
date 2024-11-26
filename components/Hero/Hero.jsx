@@ -74,14 +74,14 @@ function Home(props) {
           {isFreelance === "true" ? (
             <Text className={classes.aboutMe}>
               A freelance that specialized in static web app with a lot of
-              features and services <br /> Dont be afraid to contact me if you
-              have any questions.
+              features and services <br /> {"Don't"} be afraid to contact me if
+              you have any questions.
             </Text>
           ) : (
             <Text className={classes.aboutMe}>
-              A 20 years old from Jordan specialized in Frontend Web Development{" "}
+              A 21 years old from Jordan specialized in Frontend Web Development{" "}
               <br />
-              with good backend Knowledge
+              with a lot of backend Knowledge
             </Text>
           )}
           <Button
