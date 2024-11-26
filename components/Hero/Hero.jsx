@@ -7,31 +7,28 @@ import {
   Text,
   useMantineTheme,
   ActionIcon,
-} from '@mantine/core'
-import BackgroundAnimation from '../../lib/BackgroundAnimation'
+} from "@mantine/core";
+import BackgroundAnimation from "../../lib/BackgroundAnimation";
 import {
   IconBrandTwitter,
   IconBrandLinkedin,
   IconBrandGithub,
-} from '@tabler/icons'
-import useStyle from './heroStyle'
-import { Link } from 'react-scroll'
-import { state } from '../../lib/state'
-import { useSnapshot } from 'valtio'
+} from "@tabler/icons";
+import useStyle from "./heroStyle";
+import { Link } from "react-scroll";
 
 function Home(props) {
-  const { isFreelance, setFreelance } = props
-  const theme = useMantineTheme()
-  const { classes } = useStyle()
-  const dark = theme.colorScheme === 'dark'
-  const snap = useSnapshot(state)
+  const { isFreelance, setFreelance } = props;
+  const theme = useMantineTheme();
+  const { classes } = useStyle();
+  const dark = theme.colorScheme === "dark";
 
   return (
     <Container id='home' pb='4rem' px='md' size='xl'>
       <Group
         sx={{
           [`@media (max-width: 720px)`]: {
-            marginBottom: '2rem',
+            marginBottom: "2rem",
           },
         }}
         spacing='lg'
@@ -74,7 +71,7 @@ function Home(props) {
           <Title className={classes.title} my='sm'>
             Mohammed <br /> Kudmani
           </Title>
-          {isFreelance === 'true' ? (
+          {isFreelance === "true" ? (
             <Text className={classes.aboutMe}>
               A freelance that specialized in static web app with a lot of
               features and services <br /> Dont be afraid to contact me if you
@@ -82,7 +79,7 @@ function Home(props) {
             </Text>
           ) : (
             <Text className={classes.aboutMe}>
-              A 20 years old from Jordan specialized in Frontend Web Development{' '}
+              A 20 years old from Jordan specialized in Frontend Web Development{" "}
               <br />
               with good backend Knowledge
             </Text>
@@ -98,17 +95,17 @@ function Home(props) {
             offset={-101}
             spy={true}
             smooth={true}
-            to={isFreelance === 'true' ? 'contact' : 'projects'}
+            to={isFreelance === "true" ? "contact" : "projects"}
           >
-            {isFreelance === 'true' ? 'Contact Me' : 'My Projects'}
+            {isFreelance === "true" ? "Contact Me" : "My Projects"}
           </Button>
         </Box>
         <Box
           sx={{
-            width: '635px',
-            marginLeft: '-4rem',
-            [`@media (max-width: 720px)`]: {
-              display: 'none',
+            width: "635px",
+            marginLeft: "-4rem",
+            [`@media (max-width: 980px)`]: {
+              display: "none",
             },
           }}
         >
@@ -116,7 +113,8 @@ function Home(props) {
         </Box>
       </Group>
     </Container>
-  )
+  );
 }
 
-export default Home
+export default Home;
+

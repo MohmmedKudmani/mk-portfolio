@@ -1,15 +1,15 @@
-import Hero from '../components/Hero'
-import Services from '../components/Skills'
-import Projects from '../components/Projects'
-import Contact from '../components/Contact'
-import { useLocalStorage } from '@mantine/hooks'
+import Hero from "../components/Hero";
+import Services from "../components/Skills";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
+import { useLocalStorage } from "@mantine/hooks";
 
 function HomePage() {
   const [isFreelance, setFreelance] = useLocalStorage({
-    key: 'isFreelance',
-    defaultValue: 'false',
+    key: "isFreelance",
+    defaultValue: "false",
     getInitialValueInEffect: true,
-  })
+  });
 
   return (
     <>
@@ -18,7 +18,8 @@ function HomePage() {
       <Projects isFreelance={isFreelance} />
       <Contact />
     </>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;
+

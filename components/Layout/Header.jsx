@@ -6,28 +6,28 @@ import {
   Container,
   Group,
   Switch,
-} from '@mantine/core'
-import useStyle from './headerStyle'
-import { IconSun, IconMoon } from '@tabler/icons'
-import Links from './Links'
-import { useWindowScroll } from '@mantine/hooks'
-import logoLight from '../../public/svg/mk-logo-light.svg'
-import logoDark from '../../public/svg/mk-logo-dark.svg'
-import Image from 'next/image'
+} from "@mantine/core";
+import useStyle from "./headerStyle";
+import { IconSun, IconMoon } from "@tabler/icons";
+import Links from "./Links";
+import { useWindowScroll } from "@mantine/hooks";
+import logoLight from "../../public/svg/mk-logo-light.svg";
+import logoDark from "../../public/svg/mk-logo-dark.svg";
+import Image from "next/image";
 
 function Header(props) {
-  const { classes, cx } = useStyle()
-  const { modelOpened, state } = props
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme()
-  const dark = colorScheme === 'dark'
-  const [scroll, scrollTo] = useWindowScroll()
+  const { classes, cx } = useStyle();
+  const { modelOpened, state } = props;
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const dark = colorScheme === "dark";
+  const [scroll, scrollTo] = useWindowScroll();
 
   return (
     <>
       <MantineHeader
         sx={(theme) => ({
           boxShadow: scroll.y > 50 && theme.shadows.sm,
-          border: 'none',
+          border: "none",
           backgroundColor: dark
             ? theme.other.backgroundDark
             : theme.other.backgroundLight,
@@ -44,7 +44,7 @@ function Header(props) {
             }
             sx={{
               [`@media (min-width: 721px)`]: {
-                display: 'none',
+                display: "none",
               },
             }}
           />
@@ -56,7 +56,7 @@ function Header(props) {
               alt='logo'
               priority
               style={{
-                cursor: 'pointer',
+                cursor: "pointer",
               }}
               onClick={() => scrollTo({ y: 0 })}
             />
@@ -72,7 +72,7 @@ function Header(props) {
         </Container>
       </MantineHeader>
     </>
-  )
+  );
 }
 
 function LightDarkMode({ classes, toggleColorScheme, dark, scroll, cx }) {
@@ -82,26 +82,27 @@ function LightDarkMode({ classes, toggleColorScheme, dark, scroll, cx }) {
         <IconSun className={cx(classes.icon, classes.iconLight)} size={18} />
         <IconMoon
           style={{
-            right: scroll.y < 400 ? 12 : 4,
+            right: 4,
           }}
           className={cx(classes.icon, classes.iconDark)}
           size={18}
         />
         <Switch
           sx={(theme) => ({
-            '.mantine-Switch-input': {
+            ".mantine-Switch-input": {
               backgroundColor: dark && theme.colors.orange[5],
             },
           })}
           checked={dark}
           color='orange'
-          mr={scroll.y < 400 && '0.5rem'}
+          // mr={scroll.y < 400 && "0.5rem"}
           onChange={() => toggleColorScheme()}
           size='md'
         />
       </div>
     </Group>
-  )
+  );
 }
 
-export default Header
+export default Header;
+
