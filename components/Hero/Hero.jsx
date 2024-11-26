@@ -33,6 +33,7 @@ function Home(props) {
         }}
         spacing='lg'
         position='right'
+        mr={-8}
       >
         <ActionIcon
           href='https://twitter.com/MohammedKudamni'

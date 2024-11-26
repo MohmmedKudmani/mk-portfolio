@@ -20,7 +20,7 @@ function GlobalStyles({ modelOpened }) {
         },
 
         "::-webkit-scrollbar-track": {
-          backgroundColor: "#232534",
+          backgroundColor: theme.colorScheme === "dark" ? "#232534" : "#fdfdfd",
         },
 
         "::-webkit-scrollbar-thumb:hover": {
