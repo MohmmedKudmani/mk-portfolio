@@ -2,6 +2,10 @@
   "name": "test",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "18.20.7",
+    "npm": "v10.8.2"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -28,3 +32,4 @@
     "eslint-config-next": "12.1.5"
   }
 }
+
