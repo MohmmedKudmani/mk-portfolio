@@ -24,9 +24,7 @@ import b2b_korea from "../../public/images/b2b-korea.png";
 
 function Projects(props) {
   const { classes } = useStyles();
-  const theme = useMantineTheme();
   const { isFreelance } = props;
-  const matchXs = useMediaQuery("(max-width: 550px)");
 
   const highlightStyle = (theme) => ({
     backgroundColor: "transparent",
@@ -119,7 +117,9 @@ function Projects(props) {
                 <Text>Search Engine</Text>
               </Group>
               <Group position='center'>
-                <Text color='green'>Shows In Google</Text>
+                <Text color='green' align='center'>
+                  Shows In Google
+                </Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -133,12 +133,13 @@ function Projects(props) {
                 <Text>App Speed</Text>
               </Group>
               <Group position='center'>
-                {/* <Text color='yellow'>Moderate</Text> */}
-                <Text color='green'>Loads Under 1 Second</Text>
+                <Text color='green' align='center'>
+                  Loads Under 1 Second
+                </Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
-              <Group mb='sm' position='center'>
+              <Group mb='sm' position='center' align='center'>
                 <Image src={hosting} width={35} height={35} alt='hosting' />
                 <Text>Hosting</Text>
               </Group>
@@ -246,7 +247,9 @@ function Projects(props) {
                 <Text>Search Engine</Text>
               </Group>
               <Group position='center'>
-                <Text color='green'>Shows In Google</Text>
+                <Text color='green' align='center'>
+                  Shows In Google
+                </Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -260,8 +263,9 @@ function Projects(props) {
                 <Text>App Speed</Text>
               </Group>
               <Group position='center'>
-                {/* <Text color='yellow'>Moderate</Text> */}
-                <Text color='green'>Loads Under 1 Second</Text>
+                <Text color='green' align='center'>
+                  Loads Under 1 Second
+                </Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -370,7 +374,9 @@ function Projects(props) {
                 <Text>Search Engine</Text>
               </Group>
               <Group position='center'>
-                <Text color='green'>Shows In Google</Text>
+                <Text color='green' align='center'>
+                  Shows In Google
+                </Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>
@@ -384,8 +390,9 @@ function Projects(props) {
                 <Text>App Speed</Text>
               </Group>
               <Group position='center'>
-                {/* <Text color='yellow'>Moderate</Text> */}
-                <Text color='green'>Loads Under 1 Second</Text>
+                <Text color='green' align='center'>
+                  Loads Under 1 Second
+                </Text>
               </Group>
             </Paper>
             <Paper p='md' className={classes.features}>

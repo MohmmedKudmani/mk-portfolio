@@ -1,27 +1,27 @@
-import { Text, Divider, Box } from '@mantine/core'
+import { Text, Divider, Box } from "@mantine/core";
 import {
   createStyles,
   Container,
   Group,
   ActionIcon,
   useMantineColorScheme,
-} from '@mantine/core'
-import useStyle from './styleFooter'
+} from "@mantine/core";
+import useStyle from "./styleFooter";
 import {
   IconBrandTwitter,
   IconBrandLinkedin,
   IconBrandGithub,
-} from '@tabler/icons'
-import logoDark from '../../public/svg/mk-logo-dark.svg'
-import logoLight from '../../public/svg/mk-logo-light.svg'
-import Image from 'next/image'
-import { useWindowScroll } from '@mantine/hooks'
+} from "@tabler/icons";
+import logoDark from "../../public/svg/mk-logo-dark.svg";
+import logoLight from "../../public/svg/mk-logo-light.svg";
+import Image from "next/image";
+import { useWindowScroll } from "@mantine/hooks";
 
 function Footer() {
-  const { classes } = useStyle()
-  const { colorScheme } = useMantineColorScheme()
-  const dark = colorScheme === 'dark'
-  const [scroll, scrollTo] = useWindowScroll()
+  const { classes } = useStyle();
+  const { colorScheme } = useMantineColorScheme();
+  const dark = colorScheme === "dark";
+  const [scroll, scrollTo] = useWindowScroll();
 
   return (
     <footer className={classes.footer}>
@@ -33,11 +33,11 @@ function Footer() {
           height={60}
           alt='logo'
           style={{
-            cursor: 'pointer',
+            cursor: "pointer",
           }}
           onClick={() => scrollTo({ y: 0 })}
         />
-        <Group spacing='xs' className={classes.links} position='right' noWrap>
+        <Group spacing='xs' position='right' noWrap>
           <ActionIcon
             href='https://twitter.com/MohammedKudamni'
             target='_blank'
@@ -74,7 +74,8 @@ function Footer() {
         </Group>
       </Container>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
+

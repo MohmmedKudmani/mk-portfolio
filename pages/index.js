@@ -12,12 +12,16 @@ function HomePage() {
   });
 
   return (
-    <>
+    <main
+      style={{
+        padding: "0 0.5rem",
+      }}
+    >
       <Hero isFreelance={isFreelance} setFreelance={setFreelance} />
       <Services isFreelance={isFreelance} />
       <Projects isFreelance={isFreelance} />
       <Contact />
-    </>
+    </main>
   );
 }
 
