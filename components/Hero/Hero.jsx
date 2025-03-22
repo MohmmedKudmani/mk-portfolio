@@ -80,9 +80,9 @@ function Home(props) {
             </Text>
           ) : (
             <Text className={classes.aboutMe}>
-              A 21 years old from Jordan specialized in Frontend Web Development{" "}
+              A 21-year-old from Jordan, passionate about technology and
               <br />
-              with a lot of backend Knowledge
+              specializing in Full-Stack Web Development
             </Text>
           )}
           <Button

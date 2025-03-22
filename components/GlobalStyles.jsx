@@ -6,6 +6,7 @@ function GlobalStyles({ modelOpened }) {
       styles={(theme) => ({
         body: {
           overflow: modelOpened ? "hidden" : "overlay",
+          overflowX: "hidden",
         },
 
         "::-webkit-scrollbar": {

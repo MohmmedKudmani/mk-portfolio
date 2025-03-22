@@ -63,11 +63,12 @@ function Projects(props) {
                 <IconBrandGithub size={30} />
               </ActionIcon>
               <ActionIcon
-                component='a'
-                href='https://b2b-korea.com'
-                className={classes.projectIcon}
-                target='_blank'
+                sx={{
+                  backgroundColor: "transparent !important",
+                  border: "none !important",
+                }}
                 variant='transparent'
+                disabled
               >
                 <IconExternalLink size={30} />
               </ActionIcon>
@@ -203,11 +204,12 @@ function Projects(props) {
                 <IconBrandGithub size={30} />
               </ActionIcon>
               <ActionIcon
-                component='a'
-                href='https://www.dropflow.app'
-                className={classes.projectIcon}
-                target='_blank'
+                sx={{
+                  backgroundColor: "transparent !important",
+                  border: "none !important",
+                }}
                 variant='transparent'
+                disabled
               >
                 <IconExternalLink size={30} />
               </ActionIcon>
