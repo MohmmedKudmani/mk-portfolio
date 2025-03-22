@@ -82,7 +82,7 @@ function Home(props) {
             <Text className={classes.aboutMe}>
               A 21-year-old from Jordan, passionate about technology and
               <br />
-              specializing in Full-Stack Web Development
+              specializing in Frontend Web Development
             </Text>
           )}
           <Button
